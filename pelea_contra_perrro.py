@@ -18,7 +18,7 @@ print""
 print""
 print "Perro nivel 1, vida 10"
 
-
+money=50
 vidaperro=10
 vidausuario=15
 mana=10
@@ -26,7 +26,7 @@ mana=10
 
 while vidaperro>0 and vidausuario>0:
   
-    
+ print "Perro cuenta con", vidaperro, " puntos de vida"   
  print "cuentas con ",vidausuario, " puntos de vida" 
  print "cuentas con ",mana, "puntos de mana"
  print  "1) Ataque básico"
@@ -40,7 +40,7 @@ while vidaperro>0 and vidausuario>0:
  if usuario==1:
         
     atkusuario=random.randrange(1,6)
-    atkperro= random.randrange(1,4)
+    atkperro= random.randrange(1,3)
     vidausuario=vidausuario-atkperro
     vidaperro=vidaperro-atkusuario
         
@@ -54,7 +54,7 @@ while vidaperro>0 and vidausuario>0:
     else:    
      mana=mana-6
      atkusuario=random.randrange(5,8)
-     atkperro= random.randrange(1,4)
+     atkperro= random.randrange(1,3)
      vidaperro=vidaperro-atkusuario
      vidausuario=vidausuario-atkperro
      print "Perro causa ",atkperro," puntos de daño"
@@ -62,15 +62,20 @@ while vidaperro>0 and vidausuario>0:
      
         
  elif usuario==3:
-     atkperro= random.randrange(1,4)
+     atkperro= random.randrange(1,3)
      vidausuario=vidausuario-atkperro
      print "Perro usa mordida y causa ",atkperro, "puntos de daño"
      print "Usaste item llaves pero no sirve para nada"
      
  elif usuario==4:
-         break
+     print "Huir tiene sus consecuencias"
+     money=money-5
+     print "Ahora tienes ", money , " pesos"
+     break
+     
+         
         
-        
+print "Enemigo perro ha sido derrotado"        
 print "Terminaste la batalla con", vidausuario ," puntos de vida"
         
     
