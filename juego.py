@@ -8,7 +8,6 @@ Created on Wed Nov 12 18:59:48 2014
 from creacionpersonaje import *
 
 def main():
-    puntos_lvl = 8
     print "inicia tu epica aventura, tienes 4 habilidades que puedes subir de nivel con un maxicmo de 10 puntos cada una.\n"
     print "al inicio del juego puedes se te otorgan 8 puntos que podras repartir entre las siguientes habilidades(cada habilidad tiene un valor inicial de 5):"
     print "a) Vida: Si la pierdes toda, te mueres."
@@ -18,7 +17,7 @@ def main():
     raw_input('Presiona enter para continuar')
     os.system('cls')
     
-    jugador = crear_personaje([5,5,5,5,50])
+    jugador = crear_personaje([5,5,5,5,50],8)
     inventario = []
     os.system('cls')
     escribir_stats(jugador)
