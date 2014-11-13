@@ -15,7 +15,7 @@ def escribir_stats(jugador):
         print str(stats[i])+": "+str(jugador[i])
 
 #en orden: vida, defensa, ataque, evasion, dinero.
-def crear_personaje(jugador):
+def crear_personaje(jugador,puntos_lvl):
     while True:
         print"Selecciona la habilidad que quieres aumentar(debes agotar todos tus puntos):"
         print "1) Vida (" + str(jugador[0])
@@ -30,6 +30,7 @@ def crear_personaje(jugador):
             print "\nTe quedan", puntos_lvl, "puntos para subir de nivel, tienes que usar todos los puntos."
         else:
             print "\nHas terminado de crear a tu personaje."
+            os.system('cls')
             break
     return jugador
 

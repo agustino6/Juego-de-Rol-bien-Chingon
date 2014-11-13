@@ -19,7 +19,6 @@ def main():
     
     jugador = crear_personaje([5,5,5,5,50],8)
     inventario = []
-    os.system('cls')
     escribir_stats(jugador)
     
     #por hacer: TODO
